@@ -13,8 +13,6 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
 }
-
-/* *******************************************utulity classes****************** */
 .container{
     max-width: 1200px;
     width: 90%;
@@ -35,10 +33,6 @@ body{
     color: #fff;
     background: #28a475;
 }
-
-
-/* ***************navbar styling */
-/* for desktop mode */
 .navbar-container input[type='checkbox'],
 .navbar-container .hamburger-lines{
     display: none;
@@ -86,7 +80,6 @@ body{
 .navbar a:hover{
     color:blue;
 }
-/* *******************showcase styling************* */
 
 .showcase-area{
     height: 50vh;
@@ -106,8 +99,6 @@ body{
 .main-title{
     text-transform: uppercase;
 }
-
-/* ***********************About us************** */
 #about{
     padding: 50px 0px;
     background: #f5f5f7;
@@ -115,21 +106,16 @@ body{
 .about-wrapper{
     display: flex;
     flex: wrap;
-    /* flex-direction: row; */
-    /* flex-direction: column; */
 }
 #about h2{
     font-size: 3.2rem;
-    /* font-size: 32px; */
 }
 #about p{
     font-size: 1.6rem;
-    /* font-size: 16px; */
     color: #555;
 }
 #about .small{
     font-size: 1.6rem;
-    /* font-size: 16px; */
     color: #666;
     font-weight: 600;
 }
@@ -138,7 +124,6 @@ flex-grow: 1;
 flex-shrink: 1;
 flex-basis: 400px;
 padding: 30px;
-/* border: 2px solid red; */
 transform: translateX(150%);
 animation: about-img-animation 1s ease-in-out forwards;
 }
@@ -170,8 +155,6 @@ animation: about-text-imagination 1s ease-in-out forwards;
     object-fit: cover;
     object-position: right;
 }
-
-/* ******************food category styling************* */
 #food{
     padding: 5rem 0 10rem 0;
 
@@ -179,7 +162,6 @@ animation: about-text-imagination 1s ease-in-out forwards;
 #food h2{
     text-align: center;
     font-size: 3rem;
-    /* font-size: 48px; */
     font-weight: 400;
     margin-bottom: 40px;
     text-transform: uppercase;
@@ -192,7 +174,6 @@ animation: about-text-imagination 1s ease-in-out forwards;
 .food-container img{
     display: block;
     width:100%;
-    /* padding: 10px; */
     margin: auto;
     max-height: 300px;
     object-fit: cover;
@@ -245,11 +226,8 @@ animation: about-text-imagination 1s ease-in-out forwards;
 opacity: 1;
 top: 40%;
 }
-/* **********************food styling ************* */
-
 .food-menu-heading{
     font-size: 40px;
-    /* font-size: 4rem; */
     text-align: center;
     font-weight: 400px;
     color: #666;
@@ -274,13 +252,11 @@ top: 40%;
     flex-basis: 600px;
     justify-content: space-evenly;
     margin-bottom: 30px;
-    /* margin-bottom: 3rem; */
 
 
 }
 .food-description{
     margin: auto 15px;
-    /* margin: auto 1.5rem; */
 }
 .food-title{
     font-size: 14px;
@@ -297,8 +273,6 @@ top: 40%;
     color: #117964;
     font-weight: 700;
 }
-/* ****************testimonial styling********************* */
-
 #testimonials{
     padding: 50px 0;
     background: rgb(243, 243, 243);
@@ -339,7 +313,6 @@ top: 40%;
     margin: auto;
 
 }
-/* ***************contact us styling************ */
 #contact{
     padding: 50px 0;
     background: rgb(226, 226, 226);
@@ -392,7 +365,6 @@ top: 40%;
 .form-container a{
     font-size: 12px;
 }
-/* **********************footer styling ********************* */
 #footer h2{
     text-align: center;
     background: rgb(65, 65, 65 );
@@ -401,8 +373,6 @@ top: 40%;
     padding: 30px;
     color: #fff;
 }
-/* ******************************Media queries**************** */
-
 @media(max-width:768px){
 
     .navbar{
@@ -467,7 +437,6 @@ top: 40%;
     height: 100vh;
   
     max-width: 300px;
-    /* transition: translateX(-150px); */
     transform: translateX(-300px);
   
     display: flex;
@@ -502,7 +471,6 @@ top: 40%;
    .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line3{
     transform: rotate(-45deg);
    }
-   /* *****************food-category*************** */
    .food-container{
     flex-direction: column;
     align-items: stretch;

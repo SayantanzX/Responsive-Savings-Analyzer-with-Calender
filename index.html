@@ -1,237 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <title>Restaurant Website
-
-    </title>
+    <title>Responsive Calendar with Savings</title>
+    <script src="https://kit.fontawesome.com/37df75b44e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="navbar-container container">
-            <input type="checkbox">
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>
-                <ul class="menu-items">
-                    <li><a href="#showcase">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#food">Category</a></li>
-                    <li><a href="#food-menu">Menu</a></li>
-                    <li><a href="#testimonials">Testimonial</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <h1 class="logo">Banerjee Restaurant</h1>
-            </div>
-        
-    </nav>
-    <section class="showcase-area" id="showcase">
-        <div class="showcase-container">
-            <a href="#food-menu"class="btn btn-primary">Menu</a>
-        </div>
-    </section>
-    <section id="about">
-        <div class="about-wrapper container">
-            <div class="about-text">
-                <p class="small">About us</p>
-                <h2>We've Been Making Healthy Food For Last 10 Years</h2>
-                <p>Welcome to Banerjee Restaurant in Panagarh a culinary gem where Bengali, South Indian, and Chinese cuisines harmoniously converge at reasonable prices. Our warm and inviting space promises an extensive menu curated for diverse palates, ensuring an affordable and delightful dining experience. Conveniently located, Banerjee Restaurant invites you to savor the rich tapestry of flavors, where affordability meets excellence in every dish. Join us for a journey through the best of Indian and Chinese gastronomy, all under one roof.</p>
-            </div>
-            <div class="about-img">
-                <img src="./img/about-photo.jpg"  alt="About us">
-            </div>
-        </div>
-    </section>
-    <section id="food">
-        <h2>Types Of Food</h2>
-        <div class="food-container container">
-            <div class="food-type bengali">
-                <div class="img-container">
-                    <img src="./img/food1.jpg" height="268" alt="">
-                    <div class="div">
-                        <div class="img-content">
-                            <h3>Bengali Cuisine</h3>
-                            <a href="#" class="btn btn-primary" target="_blank">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="food-type south">
-                <div class="img-container">
-                    <img src="./img/food2.jpg" height="268" alt="">
-                    <div class="div">
-                        <div class="img-content">
-                            <h3>South Indian Cuisine</h3>
-                            <a href="#" class="btn btn-primary" target="_blank">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="food-type chinese">
-                <div class="img-container">
-                    <img src="./img/food3.jpg" height="268" alt="">
-                    <div class="div">
-                        <div class="img-content">
-                            <h3>Chinese cuisine</h3>
-                            <a href="#" class="btn btn-primary" target="_blank">Learn more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="food-menu">
-        <h2 class="food-menu-heading">
-            Food Menu
-        </h2>
-        <div class="food-menu-container container">
-            <div class="food-menu-item">
-                <div class="food-image">
-                    <img src="./img/food-menu1.jpg" alt="">
-                </div>
-                <div class="food-description">
-                    <h2 class="food-title">MUTTON KASHA (KOSHA MANGSHO) </h2>
-                    <p>Mutton Kasha is a delicious spicy Bengali Mutton Curry which is full of flavours from mutton, spices and mustard oil.</p>
-                    <p class="food-price">price: &#8377; 250</p>
-                </div>
-            </div>
-            <div class="food-menu-item">
-                <div class="food-image">
-                    <img src="./img/food-menu2.jpg" alt="">
-                </div>
-                <div class="food-description">
-                    <h2 class="food-title">PANEER BUTTER MASALA </h2>
-                    <p>Paneer Butter Masala is essentially one of the simplest yet satiating Indian accompaniment made using dollops of fresh cream, paneer and spices.</p>
-                    <p class="food-price">price: &#8377; 250</p>
-                </div>
-            </div>
-            <div class="food-menu-item">
-                <div class="food-image">
-                    <img src="./img/food-menu3.jpg" alt="">
-                </div>
-                <div class="food-description">
-                    <h2 class="food-title">CHICKEN BIRYANI </h2>
-                    <p>Best in town Dum Biryani served with mint chutney and raita.</p>
-                    <p class="food-price">price: &#8377; 250</p>
-                </div>
-            </div>
-            <div class="food-menu-item">
-                <div class="food-image">
-                    <img src="./img/food-menu4.jpg" alt="">
-                </div>
-                <div class="food-description">
-                    <h2 class="food-title"> CHICKEN CHAAP </h2>
-                    <p>Chicken Chaap is a classic delight for Indian food lovers. This is a unique combination of juicy and moist chicken pieces and rich and thick gravy.</p>
-                    <p class="food-price">price: &#8377; 250</p>
-                </div>
-            </div>
-            <div class="food-menu-item">
-                <div class="food-image">
-                    <img src="./img/food-menu5.jpg" alt="">
-                </div>
-                <div class="food-description">
-                    <h2 class="food-title"> Idli </h2>
-                    <p>Idli Sambar is a South Indian breakfast meal where soft fluffy steamed cakes known as idli are served with sambar, a vegetable lentil stew. Idli Sambar is made with lentils, plenty of spices, mixed vegetables and herbs.</p>
-                    <p class="food-price">price: &#8377; 250</p>
-                </div>
-            </div>
-            <div class="food-menu-item">
-                <div class="food-image">
-                    <img src="./img/food-menu6.jpg" alt="">
-                </div>
-                <div class="food-description">
-                    <h2 class="food-title"> Dosa </h2>
-                    <p>A dosa is a thin savory crepe in South Indian cuisine made from a fermented batter of ground black gram and rice. Dosas are served hot, often with chutney and sambar. Dosas are popular in South Asia as well as around the world.</p>
-                    <p class="food-price">price: &#8377; 250</p>
-                </div>
-            </div>
-          
-        </div>
-    </section>
-    <section id="testimonials">
-        <h2 class="testimonial-title">What our customer say</h2>
-        <div class="testimonial-container container">
-            <div class="testimonial-box">
-                <div class="start-ratting">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </div>
-                <p class="testimonial-text">
-                    Highly recommended to checkout their delicacies at reasonable prices! <br> Just tried out their chicken biryani and chicken chaap...... <br> Good quantity Less oily, yet tasty Perfectly cooked 😃👍
-                </p>
-                <div class="customer-detail">
-                    <div class="customer-photo">
-                        <img src="./img/photo1.jpg" alt="">
-                    </div>
-                    <div class="customer-name">Johny Sins</div>
-                </div>
-            </div>
-            <div class="testimonial-box">
-                <div class="start-ratting">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </div>
-                <p class="testimonial-text">
-                    "This is the best and affordable resturent in Panagarh. <br> Their biriyani was too 👍 good. <br> Quantity is enough for one people. Very nice"
-                </p>
-                <div class="customer-detail"> 
-                    <div class="customer-photo">
-                        <img src="./img/photo2.jpg" alt="">
-                    </div>
-                    <div class="customer-name">Dani Daniels</div>
-                </div>
-            </div>
-            <div class="testimonial-box">
-                <div class="start-ratting">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </div>
-                <p class="testimonial-text">
-                    Awesome food. The behaviour of the staff <br> and the owner is very good. Quality of food is too good. <br> It's very delicious and properly made with love. Must try and pocket friendly.
-                </p>
-                <div class="customer-detail">
-                    <div class="customer-photo">
-                        <img src="./img/photo3.jpg" alt="">
-                    </div>
-                    <div class="customer-name">Mia Khalifa</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section  id="contact">
-        <div class="contact-container container">
-            <div class="contact-image">
-                <img src="./img/restraunt-image.jpg" alt="">
-            </div>
-            <div class="form-container">
-                <h2>Contact us</h2>
-                <input type="text" name="" id="" placeholder="Name">
-                <input type="email"name="" id="" placeholder="Email">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Type Your Message Here"></textarea>
-                <a href="#" class="btn btn-primary"> Submit</a>
-            </div>
-        </div>
-    </section>
 
-    <footer id="footer">
-        <h2>Website From Sayantan Banerjee &copy; all right reserved </h2>
-    </footer>
-    
+<body>
+    <h1 id="view">Due to large table columns and calendar This website only supports Desktop View</h1>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <div class="month-navigation">
+                <button id="prev-month">&lt;</button>
+                <span id="current-month">August 2024</span>
+                <button id="next-month">&gt;</button>
+            </div>
+            <div class="view-selector">
+                <button id="analyze-button" title="Analyze My Savings"><i class="fa-solid fa-chart-bar"></i></button>
+                <button id="date-picker-button" title="Pick any date"><i class="fa-regular fa-calendar"></i></button> 
+                <input type="date" id="date-picker" style="display: none;">
+                <select id="view-select">
+                    <option value="day">Day</option>
+                    <option value="week">Week</option>
+                    <option value="month" selected>Month</option>
+                    <option value="year">Year</option>
+                </select>
+            </div>
+        </div>
+        <div class="calendar-body">
+            <div class="days-header">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days-grid" id="calendar-grid">
+                <!-- Calendar dates will be populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Saving Modal -->
+    <div id="saving-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2>Enter Savings</h2>
+            <form id="saving-form">
+                <label for="saving-date">Date:</label>
+                <input type="text" id="saving-date" readonly><br>
+                <label for="saving-amount">Saving Amount (Rs):</label>
+                <input type="number" id="saving-amount" required><br>
+                <div class="btnGrp">
+                    <button type="submit" title="Save Amount">Save <i class="fa-solid fa-floppy-disk"></i></button>
+                    <button type="button" id="delete-amount" style="display:none; background-color: red;" title="Delete Amount"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
+
+
+<!-- document.getElementById('saving-modal').style.display = 'none'; -->

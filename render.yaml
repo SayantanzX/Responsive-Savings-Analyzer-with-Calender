@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: savings-calendar-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: savings-calendar-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+    healthCheckPath: /docs
+
+databases:
+  - name: savings-calendar-db
+    plan: free
+    databaseName: savings_calendar
+    user: savings_user

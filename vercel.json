@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.js",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/signin",
+      "dest": "/signin.html"
+    },
+    {
+      "src": "/signup",
+      "dest": "/signup.html"
+    },
+    {
+      "src": "/analysis",
+      "dest": "/analysis.html"
+    },
+    {
+      "src": "/admin",
+      "dest": "/admin.html"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_API_URL": "@api_url",
+    "NEXT_PUBLIC_GOOGLE_CLIENT_ID": "@google_client_id"
+  }
+}

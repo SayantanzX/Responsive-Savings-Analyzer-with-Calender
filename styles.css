@@ -269,6 +269,34 @@ body {
     display: none;
 }
 
+/* User Info Styles */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    color: #333;
+    font-size: 14px;
+}
+
+.user-info span {
+    font-weight: 500;
+}
+
+.user-info button {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.user-info button:hover {
+    background-color: #f8d7da;
+}
+
 @media screen and (max-width:870px) {
     .calendar-container, .analysis-container{
         display: none;

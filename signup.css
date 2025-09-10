@@ -1,0 +1,5 @@
+/* Signup page tweaks reusing signin styles */
+.signin-card .signin-header i { color: #17a2b8; }
+.signin-btn { background: linear-gradient(135deg, #20c997, #17a2b8); }
+.signin-btn:hover { box-shadow: 0 10px 20px rgba(23, 162, 184, 0.3); }
+

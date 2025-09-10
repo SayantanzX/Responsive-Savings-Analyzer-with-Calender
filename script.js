@@ -1,22 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Check authentication first
+    checkAuthentication();
+    
     const currentMonth = document.getElementById('current-month');
     const calendarGrid = document.getElementById('calendar-grid');
     const viewSelect = document.getElementById('view-select');
     const prevButton = document.getElementById('prev-month');
     const nextButton = document.getElementById('next-month');
-    const datePickerButton = document.getElementById('date-picker-button'); // DPB
-    const datePicker = document.getElementById('date-picker'); // HDI
-    const clearDateButton = document.createElement('button'); // CDB
-    const deleteAmountButton = document.getElementById('delete-amount'); // DB
+    const datePickerButton = document.getElementById('date-picker-button'); // Date Picker Button
+    const datePicker = document.getElementById('date-picker'); // Hidden Date Input
+    const clearDateButton = document.createElement('button'); // Clear Date Button
+    const deleteAmountButton = document.getElementById('delete-amount'); // Reference to the delete button
     document.getElementById('saving-modal').style.display = 'none';
     const today = new Date();
 
     let displayedMonth = today.getMonth();
     let displayedYear = today.getFullYear();
     let displayedDay = today.getDate();
-    let savings = JSON.parse(localStorage.getItem('savings')) || {}; //SSILS
+    let savings = JSON.parse(localStorage.getItem('savings')) || {};  // Store savings in local storage
 
-    // CLear Date Button
+    // Add "Clear Date" button
     clearDateButton.style.display = "none";
     clearDateButton.id = 'clear-date-button';
     clearDateButton.innerHTML = '<i class="fa-solid fa-square-xmark"></i>';
@@ -29,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     clearDateButton.style.border = 'none';
     clearDateButton.style.borderRadius = '5px';
 
-    // clear DB to view selector
+    // Append the clear date button to the view selector
     datePickerButton.after(clearDateButton);
 
     const renderCalendar = (view) => {
@@ -361,6 +364,87 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     renderCalendar(viewSelect.value);
+    
+    // Display user info after authentication check
+    displayUserInfo();
+    attachAdminLinkIfAuthorized();
 });
+
+// Authentication functions
+function checkAuthentication() {
+    const token = localStorage.getItem('auth_token');
+    if (!token) {
+        // No token found, redirect to signin
+        window.location.href = 'signin.html';
+        return;
+    }
+    
+    // Verify token with backend
+    fetch('http://localhost:8000/auth/verify', {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            // Token is invalid, remove it and redirect to signin
+            localStorage.removeItem('auth_token');
+            localStorage.removeItem('user_info');
+            window.location.href = 'signin.html';
+        }
+        // Token is valid, continue with the app
+    })
+    .catch(error => {
+        console.error('Auth verification error:', error);
+        // On error, redirect to signin
+        localStorage.removeItem('auth_token');
+        localStorage.removeItem('user_info');
+        window.location.href = 'signin.html';
+    });
+}
+
+// Add logout functionality
+function logout() {
+    localStorage.removeItem('auth_token');
+    localStorage.removeItem('user_info');
+    window.location.href = 'signin.html';
+}
+
+// Add user info display
+function displayUserInfo() {
+    const userInfo = JSON.parse(localStorage.getItem('user_info') || '{}');
+    if (userInfo.name) {
+        // You can add a user info display in the header
+        const header = document.querySelector('.calendar-header');
+        if (header) {
+            const userDisplay = document.createElement('div');
+            userDisplay.className = 'user-info';
+            userDisplay.innerHTML = `
+                <span>Welcome, ${userInfo.name}</span>
+                <button onclick="logout()" title="Logout">
+                    <i class="fa-solid fa-sign-out-alt"></i>
+                </button>
+            `;
+            header.appendChild(userDisplay);
+        }
+    }
+}
+
+function attachAdminLinkIfAuthorized() {
+    const userInfo = JSON.parse(localStorage.getItem('user_info') || '{}');
+    if (userInfo && userInfo.role === 'admin') {
+        const header = document.querySelector('.calendar-header .view-selector');
+        if (header && !document.getElementById('admin-link-btn')) {
+            const adminBtn = document.createElement('button');
+            adminBtn.id = 'admin-link-btn';
+            adminBtn.title = 'Admin Panel';
+            adminBtn.style.marginLeft = '10px';
+            adminBtn.innerHTML = '<i class="fa-solid fa-shield"></i>';
+            adminBtn.addEventListener('click', () => window.location.href = 'admin.html');
+            header.appendChild(adminBtn);
+        }
+    }
+}
 
 

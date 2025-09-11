@@ -1,3 +1,5 @@
+const API_BASE_URL = 'https://responsive-savings-analyzer-with-calender.onrender.com';
+
 document.addEventListener('DOMContentLoaded', () => {
     // Check authentication first
     checkAuthentication();
@@ -380,7 +382,7 @@ function checkAuthentication() {
     }
     
     // Verify token with backend
-    fetch('http://localhost:8000/auth/verify', {
+    fetch(`${API_BASE_URL}/auth/verify`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`

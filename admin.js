@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API_BASE_URL = 'http://localhost:8000';
+    const API_BASE_URL = 'https://responsive-savings-analyzer-with-calender.onrender.com';
     const loadingOverlay = document.getElementById('loading-overlay');
 
     function showLoading(show = true) {

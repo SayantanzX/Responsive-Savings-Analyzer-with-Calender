@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const forgotPasswordLink = document.getElementById('forgot-password-link');
     
     // API Base URL - Update this to match your FastAPI backend
-    const API_BASE_URL = 'http://localhost:8000';
+    const API_BASE_URL = 'https://responsive-savings-analyzer-with-calender.onrender.com';
     
     // Show loading overlay
     function showLoading() {
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Google Sign-in
     window.onload = function () {
         google.accounts.id.initialize({
-            client_id: 'YOUR_GOOGLE_CLIENT_ID', // Replace with your actual Google Client ID
+            client_id: '634170748970-dtsu0ruqjtdjgik6pp18frbeqh3sjfd7.apps.googleusercontent.com', // Replace with your actual Google Client ID
             callback: handleCredentialResponse
         });
         

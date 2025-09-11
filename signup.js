@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API_BASE_URL = 'http://localhost:8000';
+    const API_BASE_URL = 'https://responsive-savings-analyzer-with-calender.onrender.com';
     const loadingOverlay = document.getElementById('loading-overlay');
     const form = document.getElementById('signup-form');
 
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.onload = function () {
         if (window.google && google.accounts && google.accounts.id) {
             google.accounts.id.initialize({
-                client_id: 'YOUR_GOOGLE_CLIENT_ID',
+                client_id: '634170748970-dtsu0ruqjtdjgik6pp18frbeqh3sjfd7.apps.googleusercontent.com',
                 callback: handleCredentialResponse
             });
             google.accounts.id.renderButton(document.getElementById('g_id_onload'), { theme: 'outline', size: 'large', width: '100%' });
